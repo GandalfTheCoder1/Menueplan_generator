@@ -21,8 +21,6 @@ def generate_image_best(
     prompt,
     output_file="image.png",
     size="1024x1024",
-    use_pexels=False,
-    pexels_api_key=None,
     translate_if_needed=True,
     mapping_file="dict.json"
 ):
@@ -42,38 +40,22 @@ def generate_image_best(
     try:
         original_prompt = prompt.strip()
         
-        if not use_pexels and translate_if_needed:
-            prompt = swissgerman_to_english(original_prompt, mapping_file)
+        
+        prompt = swissgerman_to_english(original_prompt, mapping_file)
         
         encoded_prompt = urllib.parse.quote(prompt)
         
-        if use_pexels:
-            if not pexels_api_key:
-                raise ValueError("Pexels API key is required for Pexels search.")
-            
-            headers = {"Authorization": pexels_api_key}
-            search_url = f"https://api.pexels.com/v1/search?query={encoded_prompt}&per_page=1"
-            res = requests.get(search_url, headers=headers)
-            res.raise_for_status()
-            
-            photos = res.json().get("photos")
-            if not photos:
-                print("No results found on Pexels.")
-                return None
-            
-            img_url = photos[0]["src"]["original"]
-            img_data = requests.get(img_url).content
-        else:
-            # AI image generation using Pollinations
-            width, height = size.split("x")
-            url = f"https://image.pollinations.ai/prompt/{encoded_prompt}?width={width}&height={height}&nologo=true"
-            res = requests.get(url, timeout=30)
-            
-            if res.status_code != 200:
-                print("AI image generation failed.")
-                return None
-            
-            img_data = res.content
+        
+        # AI image generation using Pollinations
+        width, height = size.split("x")
+        url = f"https://image.pollinations.ai/prompt/{encoded_prompt}?width={width}&height={height}&nologo=true"
+        res = requests.get(url, timeout=30)
+        
+        if res.status_code != 200:
+            print("AI image generation failed.")
+            return None
+        
+        img_data = res.content
         
         with open(output_file, "wb") as f:
             f.write(img_data)
