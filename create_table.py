@@ -119,12 +119,12 @@ def compile_latex_robust(tex_file, output_dir, aux_dir):
     env['TEXMFCACHE'] = aux_dir
     
     try:
-        # First compilation
+        # First compilation - handle encoding issues
         result1 = subprocess.run(
             latex_args,
             cwd=tex_dir,
             capture_output=True,
-            text=True,
+            text=False,  # Get bytes instead of text
             env=env,
             timeout=60  # Prevent hanging
         )
@@ -134,7 +134,7 @@ def compile_latex_robust(tex_file, output_dir, aux_dir):
             latex_args,
             cwd=tex_dir,
             capture_output=True,
-            text=True,
+            text=False,  # Get bytes instead of text
             env=env,
             timeout=60
         )
@@ -145,10 +145,28 @@ def compile_latex_robust(tex_file, output_dir, aux_dir):
             return generated_pdf
         else:
             print(f"LaTeX compilation failed for {tex_basename}")
-            if result2.stdout:
-                print("STDOUT:", result2.stdout[-500:])  # Last 500 chars
-            if result2.stderr:
-                print("STDERR:", result2.stderr[-500:])
+            
+            # Safely decode output for error reporting
+            try:
+                stdout_text = result2.stdout.decode('utf-8')
+            except UnicodeDecodeError:
+                try:
+                    stdout_text = result2.stdout.decode('latin-1')
+                except UnicodeDecodeError:
+                    stdout_text = result2.stdout.decode('cp1252', errors='replace')
+            
+            try:
+                stderr_text = result2.stderr.decode('utf-8')
+            except UnicodeDecodeError:
+                try:
+                    stderr_text = result2.stderr.decode('latin-1')
+                except UnicodeDecodeError:
+                    stderr_text = result2.stderr.decode('cp1252', errors='replace')
+            
+            if stdout_text:
+                print("STDOUT:", stdout_text[-500:])  # Last 500 chars
+            if stderr_text:
+                print("STDERR:", stderr_text[-500:])
             return None
             
     except subprocess.TimeoutExpired:
