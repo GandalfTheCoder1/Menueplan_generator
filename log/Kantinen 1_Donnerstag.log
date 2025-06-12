@@ -1,29 +1,29 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.6.3)  12 JUN 2025 09:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.6.4)  12 JUN 2025 08:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**"Kantinen 1_Donnerstag.tex"
-(./Kantinen 1_Donnerstag.tex
-LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2024-01-22>
-(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+**"./Kantinen 1_Donnerstag.tex"
+(Kantinen 1_Donnerstag.tex
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-04-29>
+(C:\Users\Tim\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2024/06/29 v1.4n Standard LaTeX document class
+(C:\Users\Tim\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
+File: size10.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count187
-\c@section=\count188
-\c@subsection=\count189
-\c@subsubsection=\count190
-\c@paragraph=\count191
-\c@subparagraph=\count192
-\c@figure=\count193
-\c@table=\count194
-\abovecaptionskip=\skip48
-\belowcaptionskip=\skip49
-\bibindent=\dimen140
+\c@part=\count272
+\c@section=\count273
+\c@subsection=\count274
+\c@subsubsection=\count275
+\c@paragraph=\count276
+\c@subparagraph=\count277
+\c@figure=\count278
+\c@table=\count279
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen146
 )
-(/usr/share/texmf/tex/latex/lm/lmodern.sty
+(C:\Users\Tim\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty
 Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
@@ -58,156 +58,154 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+(C:\Users\Tim\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
-2.
+6.
 
-(/usr/share/texmf/tex/latex/lm/t1lmr.fd
+(C:\Users\Tim\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
-Package: inputenc 2021/02/14 v1.3d Input encoding file
+(C:\Users\Tim\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks17
 \inpenc@posthook=\toks18
 )
-(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
-Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
+(C:\Users\Tim\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+(C:\Users\Tim\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 274.
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+(C:\Users\Tim\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
-Package xcolor Info: Model `RGB' extended on input line 1366.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
+(C:\Users\Tim\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
-Package: colortbl 2022/06/20 v1.0f Color table columns (DPC)
+(C:\Users\Tim\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
+Package: colortbl 2024/10/29 v1.0k Color table columns (DPC)
 
-(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
-Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
-\col@sep=\dimen141
-\ar@mcellbox=\box51
-\extrarowheight=\dimen142
+(C:\Users\Tim\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
+\col@sep=\dimen147
+\ar@mcellbox=\box53
+\extrarowheight=\dimen148
 \NC@list=\toks19
-\extratabsurround=\skip50
-\backup@length=\skip51
-\ar@cellbox=\box52
+\extratabsurround=\skip51
+\backup@length=\skip52
+\ar@cellbox=\box54
 )
 \everycr=\toks20
-\minrowclearance=\skip52
-\rownum=\count195
+\minrowclearance=\skip53
+\rownum=\count280
 )
-(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+(C:\Users\Tim\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen143
-\lightrulewidth=\dimen144
-\cmidrulewidth=\dimen145
-\belowrulesep=\dimen146
-\belowbottomsep=\dimen147
-\aboverulesep=\dimen148
-\abovetopsep=\dimen149
-\cmidrulesep=\dimen150
-\cmidrulekern=\dimen151
-\defaultaddspace=\dimen152
-\@cmidla=\count196
-\@cmidlb=\count197
-\@aboverulesep=\dimen153
-\@belowrulesep=\dimen154
-\@thisruleclass=\count198
-\@lastruleclass=\count199
-\@thisrulewidth=\dimen155
+\heavyrulewidth=\dimen149
+\lightrulewidth=\dimen150
+\cmidrulewidth=\dimen151
+\belowrulesep=\dimen152
+\belowbottomsep=\dimen153
+\aboverulesep=\dimen154
+\abovetopsep=\dimen155
+\cmidrulesep=\dimen156
+\cmidrulekern=\dimen157
+\defaultaddspace=\dimen158
+\@cmidla=\count281
+\@cmidlb=\count282
+\@aboverulesep=\dimen159
+\@belowrulesep=\dimen160
+\@thisruleclass=\count283
+\@lastruleclass=\count284
+\@thisrulewidth=\dimen161
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(C:\Users\Tim\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+(C:\Users\Tim\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks21
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+(C:\Users\Tim\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+(C:\Users\Tim\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+(C:\Users\Tim\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 107.
+Package graphics Info: Driver file: pdftex.def on input line 106.
 )
-\Gin@req@height=\dimen156
-\Gin@req@width=\dimen157
-)
-(/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
-Package: tabularx 2023/07/08 v2.11c `tabularx' package (DPC)
-\TX@col@width=\dimen158
-\TX@old@table=\dimen159
-\TX@old@col=\dimen160
-\TX@target=\dimen161
-\TX@delta=\dimen162
-\TX@cols=\count266
+\Gin@req@height=\dimen162
+\Gin@req@width=\dimen163
+) (C:\Users\Tim\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
+Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
+\TX@col@width=\dimen164
+\TX@old@table=\dimen165
+\TX@old@col=\dimen166
+\TX@target=\dimen167
+\TX@delta=\dimen168
+\TX@cols=\count285
 \TX@ftn=\toks22
 )
-(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
-Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
-\multirow@colwidth=\skip53
-\multirow@cntb=\count267
-\multirow@dima=\skip54
-\bigstrutjot=\dimen163
+(C:\Users\Tim\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
+Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
+\multirow@colwidth=\skip54
+\multirow@cntb=\count286
+\multirow@dima=\skip55
+\bigstrutjot=\dimen169
 )
-(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+(C:\Users\Tim\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
-(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+(C:\Users\Tim\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 
-(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
-Package: iftex 2022/02/03 v1.0f TeX engine tests
+(C:\Users\Tim\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
 ))
-\Gm@cnth=\count268
-\Gm@cntv=\count269
-\c@Gm@tempcnt=\count270
-\Gm@bindingoffset=\dimen164
-\Gm@wd@mp=\dimen165
-\Gm@odd@mp=\dimen166
-\Gm@even@mp=\dimen167
-\Gm@layoutwidth=\dimen168
-\Gm@layoutheight=\dimen169
-\Gm@layouthoffset=\dimen170
-\Gm@layoutvoffset=\dimen171
+\Gm@cnth=\count287
+\Gm@cntv=\count288
+\c@Gm@tempcnt=\count289
+\Gm@bindingoffset=\dimen170
+\Gm@wd@mp=\dimen171
+\Gm@odd@mp=\dimen172
+\Gm@even@mp=\dimen173
+\Gm@layoutwidth=\dimen174
+\Gm@layoutheight=\dimen175
+\Gm@layouthoffset=\dimen176
+\Gm@layoutvoffset=\dimen177
 \Gm@dimlist=\toks23
-)
+
+(C:\Users\Tim\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
 LaTeX Font Info:    Trying to load font information for T1+lmss on input line 5
 0.
 
-(/usr/share/texmf/tex/latex/lm/t1lmss.fd
+(C:\Users\Tim\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count271
-\l__pdf_internal_box=\box53
+(C:\Users\Tim\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdfte
+x.def
+File: l3backend-pdftex.def 2025-04-14 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count290
 )
 
 LaTeX Warning: Unused global option(s):
     [20pt].
 
-
-(/home/tutzinger/Documents/Pigna/menueplan_repo/Menueplan_app/log/Kantinen 1_Do
-nnerstag.aux)
+(C:\Users\Tim\OneDrive\Dokumente\Menueplan_app\log\Kantinen 1_Donnerstag.aux)
 \openout1 = `"Kantinen 1_Donnerstag.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
@@ -225,27 +223,28 @@ LaTeX Font Info:    ... okay on input line 50.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
 LaTeX Font Info:    ... okay on input line 50.
 
-(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+(C:\Users\Tim\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count272
-\scratchdimen=\dimen172
-\scratchbox=\box54
-\nofMPsegments=\count273
-\nofMParguments=\count274
+\scratchcounter=\count291
+\scratchdimen=\dimen178
+\scratchbox=\box55
+\nofMPsegments=\count292
+\nofMParguments=\count293
 \everyMPshowfont=\toks24
-\MPscratchCnt=\count275
-\MPscratchDim=\dimen173
-\MPnumerator=\count276
-\makeMPintoPDFobject=\count277
+\MPscratchCnt=\count294
+\MPscratchDim=\dimen179
+\MPnumerator=\count295
+\makeMPintoPDFobject=\count296
 \everyMPtoPDFconversion=\toks25
-) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+)
+(C:\Users\Tim\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-bas
+e.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
+(C:\Users\Tim\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -283,25 +282,25 @@ e
 
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 5
 5.
-(/usr/share/texmf/tex/latex/lm/ot1lmr.fd
+(C:\Users\Tim\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 5
 5.
 
-(/usr/share/texmf/tex/latex/lm/omllmm.fd
+(C:\Users\Tim\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
 55.
 
-(/usr/share/texmf/tex/latex/lm/omslmsy.fd
+(C:\Users\Tim\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
 55.
 
-(/usr/share/texmf/tex/latex/lm/omxlmex.fd
+(C:\Users\Tim\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -364,37 +363,36 @@ File: D.jpg Graphic file (type jpg)
 <use D.jpg>
 Package pdftex.def Info: D.jpg  used on input line 68.
 (pdftex.def)             Requested size: 99.58032pt x 99.58032pt.
+
+
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/
-dvips/lm/lm-ec.enc} <./A.jpg> </home/tutzinger/Documents/Pigna/menueplan_repo/M
-enueplan_app/log/../output_img/Kantinen 1_row0_c4.png> </home/tutzinger/Documen
-ts/Pigna/menueplan_repo/Menueplan_app/log/../output_img/Kantinen 1_row1_c4.png>
- <./C.jpg> </home/tutzinger/Documents/Pigna/menueplan_repo/Menueplan_app/log/..
-/output_img/Kantinen 1_row2_c4.png> </home/tutzinger/Documents/Pigna/menueplan_
-repo/Menueplan_app/log/../output_img/Kantinen 1_row3_c4.png> <./D.jpg>]
-(/home/tutzinger/Documents/Pigna/menueplan_repo/Menueplan_app/log/Kantinen 1_Do
-nnerstag.aux)
+{C:/Users/Tim/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Tim/Ap
+pData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc} <./A.jpg> <../output_
+img/Kantinen 1_row0_c4.png> <../output_img/Kantinen 1_row1_c4.png> <./C.jpg> <.
+./output_img/Kantinen 1_row2_c4.png> <../output_img/Kantinen 1_row3_c4.png> <./
+D.jpg>]
+(C:\Users\Tim\OneDrive\Dokumente\Menueplan_app\log\Kantinen 1_Donnerstag.aux)
  ***********
-LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2024-01-22>
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-04-29>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3171 strings out of 474222
- 50454 string characters out of 5748734
- 1929975 words of memory out of 5000000
- 25391 multiletter control sequences out of 15000+600000
- 580419 words of font info for 50 fonts, out of 8000000 for 9000
+ 3186 strings out of 469923
+ 51571 string characters out of 5470139
+ 442398 words of memory out of 5000000
+ 29977 multiletter control sequences out of 15000+600000
+ 649175 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,14n,70p,374b,354s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/ty
-pe1/public/lm/lmssbx10.pfb>
-Output written on "/home/tutzinger/Documents/Pigna/menueplan_repo/Menueplan_app
-/log/Kantinen 1_Donnerstag.pdf" (1 page, 763069 bytes).
+ 57i,14n,70p,376b,363s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Tim/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb>
+<C:/Users/Tim/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb>
+
+Output written on "C:\Users\Tim\OneDrive\Dokumente\Menueplan_app\log\Kantinen 1
+_Donnerstag.pdf" (1 page, 765137 bytes).
 PDF statistics:
- 26 PDF objects out of 1000 (max. 8388607)
- 11 compressed objects within 1 object stream
+ 24 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
