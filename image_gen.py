@@ -43,6 +43,8 @@ def generate_image_best(
         
         prompt = swissgerman_to_english(original_prompt, mapping_file)
         
+        prompt = "generiere ein gericht: " + prompt
+
         encoded_prompt = urllib.parse.quote(prompt)
         
         
@@ -65,3 +67,5 @@ def generate_image_best(
     except Exception as e:
         print(f"[Error] {e}")
         return None
+    
+    

@@ -6,7 +6,7 @@ if __name__ == "__main__":
 
     csv_folder = "csv_files"
     tex_folder = "output_tex"
-    pdf_folder = "output_pdf"
+    pdf_folder = "Menues"
 
     ct.create_latex_tables_from_folder(
         csv_folder,

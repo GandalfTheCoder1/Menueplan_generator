@@ -59,8 +59,8 @@ def get_latex_preamble():
 % Geometry with consistent margins
 \usepackage[a4paper, margin=2.54cm]{geometry}
 
-% Consistent spacing
-\renewcommand{\arraystretch}{2.0}
+% Keep normal spacing - we'll control row heights individually
+\renewcommand{\arraystretch}{1.0}
 \setlength{\tabcolsep}{6pt}
 
 % Remove page numbers and headers
@@ -176,7 +176,23 @@ def compile_latex_robust(tex_file, output_dir, aux_dir):
         print(f"LaTeX compilation error for {tex_basename}: {e}")
         return None
 
-def create_latex_tables_from_folder(csv_folder, tex_folder="output_tex", pdf_folder="output", img_folder="output_img", aux_folder="log", wrap_document=True, **latex_kwargs):
+def create_latex_tables_from_folder(csv_folder, tex_folder="output_tex", pdf_folder="Menues", 
+                                   img_folder="output_img", aux_folder="log", wrap_document=True, 
+                                   custom_column_values=None, custom_column_header="Zeit", **latex_kwargs):
+    """
+    Generate LaTeX tables with custom column on the left.
+    
+    Parameters:
+    custom_column_values (dict): Dictionary mapping day names to lists of custom values
+                                Example: {"Montag": ["08:00", "12:00", "14:00", "16:00", "18:00", "20:00"],
+                                         "Dienstag": ["08:00", "12:00", "14:00", "16:00", "18:00"]}
+    custom_column_header (str): Header text for the custom column (default: "Zeit")
+    """
+    
+    # Default custom values if none provided
+    default_values_weekday = ["", "", "T", "E", "S", ""]  # 6 rows
+    default_values_tuesday_thursday = ["", "", "E", "S", "A"]  # 5 rows
+    
     # Create directories
     os.makedirs(tex_folder, exist_ok=True)
     os.makedirs(pdf_folder, exist_ok=True)
@@ -253,6 +269,16 @@ def create_latex_tables_from_folder(csv_folder, tex_folder="output_tex", pdf_fol
             items_to_show = all_items[:6] + [""] * (6 - len(all_items))
             table_rows = []
 
+            # Get custom values for this day
+            if custom_column_values and day_name in custom_column_values:
+                custom_values = custom_column_values[day_name]
+            else:
+                # Use default values based on day type
+                if is_tuesday_thursday:
+                    custom_values = default_values_tuesday_thursday
+                else:
+                    custom_values = default_values_weekday
+
             if is_tuesday_thursday:
                 row_configs = [
                     (0, "A", "rowCyan"), (1, None, "rowCyan"),
@@ -276,6 +302,19 @@ def create_latex_tables_from_folder(csv_folder, tex_folder="output_tex", pdf_fol
                 item = items_to_show[item_idx]
                 img_cell = ""
                 text_cell = ""
+
+                # Get custom value for this row
+                custom_value = custom_values[row] if row < len(custom_values) else ""
+                
+                # Escape custom value for LaTeX
+                escaped_custom_value = custom_value
+                latex_special_chars = {
+                    '&': r'\&', '%': r'\%', '$': r'\$', '#': r'\#', '_': r'\_',
+                    '{': r'\{', '}': r'\}', '~': r'\textasciitilde{}',
+                    '^': r'\textasciicircum{}', '\\': r'\textbackslash{}'
+                }
+                for char, escape in latex_special_chars.items():
+                    escaped_custom_value = escaped_custom_value.replace(char, escape)
 
                 if item and item.strip():
                     # Generate image
@@ -303,21 +342,21 @@ def create_latex_tables_from_folder(csv_folder, tex_folder="output_tex", pdf_fol
                     pikto_filename = all_piktos[pikto_key]
                     pikto_img = f"\\centering\\raisebox{{-0.5\\height}}{{\\includegraphics[width=3.5cm,height=3.5cm,keepaspectratio]{{{pikto_filename}}}}}"
 
-                # Create table row with consistent formatting
+                # Create table row with custom column (now 4 columns total) - with explicit row height
                 color_prefix = f"\\rowcolor{{{row_color}}}\n" if row_color else ""
-                row_latex = f"{color_prefix}{pikto_img} & {img_cell} & {text_cell} \\\\ \\hline"
+                row_latex = f"{color_prefix}\\rule{{0pt}}{{70pt}}\\centering\\textbf{{{escaped_custom_value}}} & {pikto_img} & {img_cell} & {text_cell} \\\\ \\hline"
                 table_rows.append(row_latex)
 
             table_content = "\n".join(table_rows)
             
-            # Use consistent header coloring
+            # Use consistent header coloring (now spans 4 columns) - with fixed height
             header_color = header_colors[(col_idx-1) % len(header_colors)]
-            colored_header = f"\\multicolumn{{3}}{{|c|}}{{\\cellcolor{{{header_color}}} \\textbf{{{col_name}}}}} \\\\"
+            colored_header = f"\\multicolumn{{4}}{{|c|}}{{\\cellcolor{{{header_color}}} \\rule{{0pt}}{{20pt}}\\textbf{{{col_name}}}}} \\\\"
 
-            # Create table with consistent formatting
+            # Create table with consistent formatting (now 4 columns)
             table_latex = f"""\\begin{{center}}
 \\Large
-\\begin{{tabular}}{{|m{{4cm}}|m{{4cm}}|m{{6cm}}|}}
+\\begin{{tabular}}{{|m{{2.5cm}}|m{{3cm}}|m{{3.5cm}}|m{{5.5cm}}|}}
 \\hline
 {colored_header}
 \\hline
@@ -388,3 +427,49 @@ def create_latex_tables_from_folder(csv_folder, tex_folder="output_tex", pdf_fol
     shutil.rmtree(tex_folder, ignore_errors=True)
     shutil.rmtree(img_folder, ignore_errors=True)
     shutil.rmtree("csv_files", ignore_errors=True)
+
+# Example usage functions:
+
+def create_tables_with_time_column(csv_folder):
+    """Create tables with time values in the left column"""
+    time_values = {
+        "Montag": ["08:00", "12:00", "14:00", "16:00", "18:00", "20:00"],
+        "Dienstag": ["08:00", "12:00", "14:00", "16:00", "18:00"],
+        "Mittwoch": ["08:00", "12:00", "14:00", "16:00", "18:00", "20:00"],
+        "Donnerstag": ["08:00", "12:00", "14:00", "16:00", "18:00"],
+        "Freitag": ["08:00", "12:00", "14:00", "16:00", "18:00", "20:00"],
+        "Samstag": ["10:00", "13:00", "15:00", "17:00", "19:00", "21:00"],
+        "Sonntag": ["10:00", "13:00", "15:00", "17:00", "19:00", "21:00"]
+    }
+    
+    create_latex_tables_from_folder(
+        csv_folder, 
+        custom_column_values=time_values, 
+        custom_column_header="Uhrzeit"
+    )
+
+def create_tables_with_meal_type_column(csv_folder):
+    """Create tables with meal type values in the left column"""
+    meal_values = {
+        "Montag": ["Frühstück", "Mittagessen", "Zwischenmahlzeit", "Abendessen", "Spätmahlzeit", "Snack"],
+        "Dienstag": ["Frühstück", "Mittagessen", "Zwischenmahlzeit", "Abendessen", "Spätmahlzeit"],
+        "Mittwoch": ["Frühstück", "Mittagessen", "Zwischenmahlzeit", "Abendessen", "Spätmahlzeit", "Snack"],
+        "Donnerstag": ["Frühstück", "Mittagessen", "Zwischenmahlzeit", "Abendessen", "Spätmahlzeit"],
+        "Freitag": ["Frühstück", "Mittagessen", "Zwischenmahlzeit", "Abendessen", "Spätmahlzeit", "Snack"],
+        "Samstag": ["Brunch", "Mittagessen", "Kaffee", "Abendessen", "Spätmahlzeit", "Snack"],
+        "Sonntag": ["Brunch", "Mittagessen", "Kaffee", "Abendessen", "Spätmahlzeit", "Snack"]
+    }
+    
+    create_latex_tables_from_folder(
+        csv_folder, 
+        custom_column_values=meal_values, 
+        custom_column_header="Mahlzeit"
+    )
+
+def create_tables_with_custom_values(csv_folder, custom_values, header_name):
+    """Create tables with fully custom values"""
+    create_latex_tables_from_folder(
+        csv_folder, 
+        custom_column_values=custom_values, 
+        custom_column_header=header_name
+    )
