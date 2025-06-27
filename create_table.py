@@ -19,7 +19,7 @@ class LaTeXMenuGenerator:
     
     # Default custom column values
     DEFAULT_VALUES_WEEKDAY = ["", "", "T", "E", "S", ""]
-    DEFAULT_VALUES_TUESDAY_THURSDAY = ["", "", "E", "S", "A"]
+    DEFAULT_VALUES_TUESDAY_THURSDAY = ["", "", "T", "S", "A"]
     
     # LaTeX special characters mapping
     LATEX_SPECIAL_CHARS = {
